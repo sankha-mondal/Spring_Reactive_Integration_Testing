@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Vaccine Details</title>
+</head>
+<body>
+	<h2>Vaccines Details</h2>
+	<table>
+		<tr>
+			<th>Vaccines</th>
+			<th>Availability</th>
+		</tr>
+		<tr th:each="vaccine : ${vaccines}">
+			<td th:text="${vaccine.name}"></td>
+			<td th:text="${vaccine.delivered}"></td>
+		</tr>
+	</table>
+</body>
+</html>
